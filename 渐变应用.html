@@ -89,6 +89,7 @@
             width: 200px;
             height: 200px;
             margin: auto;
+            transition: all 1s;
         }
 
         .item:nth-child(1) .radial-gradient {
@@ -125,12 +126,92 @@
             background-size: 60px 40px;
             animation: load 1s linear 0s infinite;
         }
+
+        .item:nth-child(4) .radial-gradient {
+            border-radius: 50%;
+            background-color: #e4e4e4;
+            background-image: radial-gradient(circle  at top left,
+            transparent 20%, #ff0 20%,#ff0 30%, transparent 30%,transparent 70%, #ff0 70%,#ff0 80%,transparent 80%
+            );
+        }
+
+        .item:nth-child(5) .radial-gradient {
+            border-radius: 50%;
+            background-color: #e4e4e4;
+            background-image: radial-gradient(
+                    circle  at top left,transparent 20%, #ff0 20%, #ff0 30%,transparent 30%,transparent 50%
+            ),radial-gradient(
+                    circle  at bottom right,transparent 20%, #ff0 20%, #ff0 30%,transparent 30%,transparent 50%
+            );
+        }
+
+        .item:nth-child(6) .radial-gradient {
+            border-radius: 50%;
+            background-color: #ff1826;
+            background-image: -webkit-repeating-radial-gradient(
+                    circle  at top left,transparent 10%, #ff0 10%, #ff0 20%,transparent 20%,transparent 30%
+            );
+            background-image: repeating-radial-gradient(
+                    circle  at top left,transparent 10%, #ff0 10%, #ff0 20%,transparent 20%,transparent 30%
+            );
+        }
+
+        .item:nth-child(7) .radial-gradient {
+            border-radius: 50%;
+            background-color: #ff1826;
+            background-image: repeating-linear-gradient( 135deg,transparent 0%,transparent 5%, #ffc40b 5%, #ffc40b 10%);
+            background-size: 100%;
+            animation: load1 1s linear 0s infinite;
+        }
+
         @keyframes load {
             0%{background-position: 0}
             100%{background-position: 100%}
 
         }
+        @keyframes load1 {
+            0%{background-position: 0}
+            100%{background-position: 200px}
 
+        }
+
+        .item:nth-child(8) .radial-gradient {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            position: relative;
+            background: linear-gradient(-45deg, #B80734 0%, #d5093c 40%);
+            transform: rotate(45deg);
+            box-shadow: 0 0 40px #d5093c;
+            animation: beat .35s ease-in 0s infinite alternate;
+        }
+        @keyframes beat {
+            form{
+                transform: rotate(45deg) scale(1);
+                box-shadow: 0 0 40px #d5093c;
+            }
+            to{
+                transform: rotate(45deg) scale(1.1);
+                box-shadow: 0 0 70px #d5093c;
+            }
+        }
+        .item:nth-child(8) .radial-gradient::after,
+        .item:nth-child(8) .radial-gradient::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 40px #d5093c;
+            background-image: linear-gradient(90deg, #F50A45 0%, #d5093c 40%);
+            animation: shadow .35s ease-in 0s infinite alternate;
+        }
+        .item:nth-child(8) .radial-gradient::after{
+            transform: translateX(-50%);
+        }
+        .item:nth-child(8) .radial-gradient::before{
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
@@ -150,8 +231,20 @@
                 正在加载....
             </div>
         </div>
+        <div class="item" data-brief="立体球">
+            <div class="radial-gradient"></div>
+        </div>
         <div class="item">
-
+            <div class="radial-gradient"></div>
+        </div>
+        <div class="item" data-brief="彩色条球">
+            <div class="radial-gradient"></div>
+        </div>
+        <div class="item" data-brief="圆形进度条">
+            <div class="radial-gradient"></div>
+        </div>
+        <div class="item" data-brief="心">
+            <div class="radial-gradient"></div>
         </div>
     </div>
 </div>

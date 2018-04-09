@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            margin: 0 auto;
+            height: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .head {
+            height: 60px;
+            line-height: 60px;
+            color: #fff;
+            background-image: -webkit-linear-gradient(left, #4F8CFE, #38B8FE);
+        }
+
+        .head ul {
+            display: flex;
+        }
+
+        .head li {
+            flex: 1;
+        }
+
+        .head li:nth-child(2) {
+            flex: 5;
+        }
+
+        .head li:last-child {
+            font-size: 40px;
+            font-weight: 200;
+        }
+
+        .user-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+            margin: 10px auto;
+        }
+
+        .footer {
+            height: 60px;
+            line-height: 60px;
+            border-top: 1px solid #eee;
+            background: #fff;
+            color: #47BAFE;
+
+        }
+
+        .footer ul {
+            display: flex;
+        }
+
+        .footer li {
+            flex: 1;
+        }
+
+        .main {
+            background: #17faff;
+            display: flex;
+            flex: 1;
+        }
+
+        .main .sidebar {
+            width: 0;
+            /*flex: 1;*/
+            overflow: hidden;
+            position: relative;
+            margin-top: -60px;
+            background: #fff;
+            transition: all .2s ease-in-out;
+            margin-bottom: -60px;
+            text-align: left;
+        }
+
+        .main .main-r {
+            flex: 1;
+            background: #fff;
+            overflow: scroll;
+        }
+
+        .main-r li {
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .main:hover .sidebar {
+            flex: 2;
+            box-shadow: 3px 0 16px rgba(0, 0, 0, .2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .user-img {
+            flex: 5;
+            background: url(images/backlit-blue-sky-clouds-687782.jpg) no-repeat center /cover;
+        }
+
+        .sidebar .service-list {
+            flex: 14;
+            overflow: scroll;
+        }
+
+        .service-list ul {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+
+        .service-list li {
+            padding-top: 20px;
+            padding-left: 15px;
+        }
+
+        .sidebar .widget {
+            flex: 1;
+            font-size: 14px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="head">
+        <ul>
+            <li>
+                <div class="user-logo"></div>
+            </li>
+            <li>消息</li>
+            <li>+</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <div class="user-img">
+            </div>
+            <div class="service-list">
+                <ul>
+                    <li>我是列表1</li>
+                    <li>我是列表2</li>
+                    <li>我是列表3</li>
+                    <li>我是列表4</li>
+                    <li>我是列表5</li>
+                </ul>
+            </div>
+            <div class="widget">
+                设置
+            </div>
+        </div>
+        <div class="main-r">
+            <ul>
+                <li>我是列表1</li>
+                <li>我是列表2</li>
+                <li>我是列表3</li>
+                <li>我是列表4</li>
+                <li>我是列表5</li>
+                <li>我是列表6</li>
+                <li>我是列表7</li>
+                <li>我是列表8</li>
+                <li>我是列表9</li>
+                <li>我是列表10</li>
+                <li>我是列表11</li>
+                <li>我是列表12</li>
+                <li>我是列表13</li>
+                <li>我是列表14</li>
+                <li>我是列表15</li>
+                <li>我是列表16</li>
+                <li>我是列表17</li>
+                <li>我是列表18</li>
+                <li>我是列表19</li>
+                <li>我是列表20</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>消息</li>
+            <li>联系人</li>
+            <li>动态</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
